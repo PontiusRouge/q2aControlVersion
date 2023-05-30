@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Email Announcements Admin</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!--Page Title-->
+        <h1>Email Announcements</h1>
+        
+        <!--Home and log out buttons-->
+        <a href="index.html" class="button">Back to Home</a>
+        <a class="button logout-button" href="login.html">Log Out</a>
+        
+        <!--Add new announcement form-->
+        <div id="form-container">
+            <form class="form">
+                <fieldset>
+                    <legend>Create New Announcement Email</legend>
+                    
+                    <div class="form-row">
+                        <label for="sender-name">Sender's Name:</label>
+                        <input type="text" id="sender-name" name="sender-name">
+                    </div>
+
+                    <div class="form-row">
+                        <label for="subject-line">Subject Line:</label>
+                        <input type="text" id="subject-line" name="subject-line">
+                    </div>
+
+                    <div class="form-row">
+                        <label for="email-body">Email Body:</label>
+                        <textarea id="email-body" name="email-body"></textarea>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="attachment">Attachment:</label>
+                        <input type="file" id="attachment" name="attachment">
+                    </div>
+
+                    <div class="form-row">
+                        <label for="send-date">Send Date:</label>
+                        <input type="date" id="send-date" name="send-date">
+                    </div>
+
+                    <input type="submit" value="Schedule Email" class="wider-button">
+
+                </fieldset>
+            </form>
+        </div>
+
+        <!--Table to display data-->
+        <table class="table">
+            <tr>
+                <th>Sender <br><input type="text" class="search-box" placeholder="Search"></th>
+                <th>Subject <br><input type="text" class="search-box" placeholder="Search"></th>
+                <th>Email Body <br><input type="text" class="search-box" placeholder="Search"></th>
+                <th>Attachment <br><input type="text" class="search-box" placeholder="Search"></th>
+                <th>Send Date <br><input type="text" class="search-box" placeholder="Search"></th>
+                <th>Archived<br><input type="checkbox" class="search-box" id="archived-checkbox"></th>
+                <th>Actions <br><button id="reset-button">Remove Filter</button></th>
+            </tr>
+
+            <!--Example data to show how table will show it-->
+            <tr>
+                <td>Admin John</td>
+                <td>Upcoming Social Event</td>
+                <td>We are excited to announce a new BBQ party event that will take place in Park A...</td>
+                <td>BBQ_Party_Invitation.pdf</td>
+                <td>30/06/2023</td>
+                <td class="centered-checkbox-cell"><input type="checkbox" class="search-box" id="archived-checkbox" checked></td>
+                <td>
+                    <button>Edit</button>
+                    <button>Delete</button>
+                    <button>Save</button>
+                    <button>Archive</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Admin Mary</td>
+                <td>Charity Run Reminder</td>
+                <td>This is a friendly reminder for the upcoming Charity Run event at the City Center...</td>
+                <td>Charity_Run_Details.docx</td>
+                <td>10/07/2023</td>
+                <td class="centered-checkbox-cell"><input type="checkbox" class="search-box" id="archived-checkbox"></td>
+                <td>
+                    <button>Edit</button>
+                    <button>Delete</button>
+                    <button>Save</button>
+                    <button>Archive</button>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
