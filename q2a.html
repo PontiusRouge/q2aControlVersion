@@ -16,16 +16,16 @@
             <button class="button" onclick="window.location.href='#'">Back to Home</button>
             <button class="button logout-button" onclick="window.location.href='#'">Log Out</button>
         </header>
-        
-         <!--Add new announcement form-->
-        <section id="form-container" role="form">
-        <!--Changed submit button to post to reflector-->
-        <form action="https://students.open.ac.uk/mct/tt284/reflect/reflect.php" method="POST" class="form">
-            <fieldset>
-                <legend>Create New Announcement Email</legend>
 
-                <!--SessionIdentifier field-->
-                <input type="hidden" name="SessionIdentifier" value="ee32-ff67-abcd1234-9090">
+        <!--Add new announcement form-->
+        <section id="form-container">
+            <!--Changed submit button to post to reflector-->
+            <form action="https://students.open.ac.uk/mct/tt284/reflect/reflect.php" method="POST" class="form">
+                <fieldset>
+                    <legend>Create New Announcement Email</legend>
+
+                    <!--SessionIdentifier field-->
+                    <input type="hidden" name="SessionIdentifier" value="ee32-ff67-abcd1234-9090">
                     
                     <!--Form fields-->
                     <div class="form-row">
@@ -72,39 +72,50 @@
                         <th>Actions <br><button id="reset-button">Remove Filter</button></th>
                     </tr>
                 </thead>
-            <tbody>
-
-            <!--Example data to show how table will show it-->
-            <tr>
-                <td>Admin John</td>
-                <td>Upcoming Social Event</td>
-                <td>We are excited to announce a new BBQ party event that will take place in Park A...</td>
-                <td>BBQ_Party_Invitation.pdf</td>
-                <td>30/06/2023</td>
-                <td class="centered-checkbox-cell"><input type="checkbox" class="search-box" checked></td>
-                <td>
-                    <button>Edit</button>
-                    <button>Delete</button>
-                    <button>Save</button>
-                    <button>Archive</button>
-                </td>
-            </tr>
-            <tr>
-                <td>Admin Mary</td>
-                <td>Charity Run Reminder</td>
-                <td>This is a friendly reminder for the upcoming Charity Run event at the City Center...</td>
-                <td>Charity_Run_Details.docx</td>
-                <td>10/07/2023</td>
-                <td class="centered-checkbox-cell"><input type="checkbox" class="search-box"></td>
-                <td>
-                    <button>Edit</button>
-                    <button>Delete</button>
-                    <button>Save</button>
-                    <button>Archive</button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</section>
-</body>
+                <tbody>
+                    <!--Example data to show how table will show it-->
+                    <tr>
+                        <td>Admin John</td>
+                        <td>Upcoming Social Event</td>
+                        <td>We are excited to announce a new BBQ party event that will take place in Park A...</td>
+                        <td>BBQ_Party_Invitation.pdf</td>
+                        <td>30/06/2023</td>
+                        <td class="centered-checkbox-cell"><input type="checkbox" class="search-box" checked></td>
+                        <td>
+                            <button>Edit</button>
+                            <button>Delete</button>
+                            <button>Save</button>
+                            <button>Archive</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Admin Mary</td>
+                        <td>Charity Run Reminder</td>
+                        <td>This is a friendly reminder for the upcoming Charity Run event at the City Center...</td>
+                        <td>Charity_Run_Details.docx</td>
+                        <td>10/07/2023</td>
+                        <td class="centered-checkbox-cell"><input type="checkbox" class="search-box"></td>
+                        <td>
+                            <button>Edit</button>
+                            <button>Delete</button>
+                            <button>Save</button>
+                            <button>Archive</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <footer>
+            <p>© OU Running Club 2023</p>
+            <p>Admin Panel Version 1</p>
+            <p>
+                <a href="#">support@runningclub.com</a>
+                <br>
+                <a href="#">Privacy Policy</a> |
+                <a href="#">Usage Policy</a> |
+                <a href="#">Admin Panel Guide</a>
+            </p>
+        </footer>
+        
+    </body>
 </html>
