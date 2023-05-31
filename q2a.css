@@ -3,11 +3,13 @@ body {
     font-family: Arial, sans-serif; 
     padding: 20px; 
     box-sizing: border-box; 
+    background-color: #F5F5F5;
+    position: relative; /* added this */
 }
 
 .button {
     /* Styles for the home button */
-    display: block;
+    display: inline-block;
     width: max-content;
     padding: 10px 20px;
     color: black;
@@ -16,118 +18,23 @@ body {
     border: 1px solid black;
     border-radius: 5px;
     text-align: center;
+    background-color: #E0E0E0;
+}
+
+.logout-button {
+    /* Styles for the log out button */
+    position: absolute;
+    right: 20px;
+    top: 20px;
 }
 
 .button:hover {
-    /* Underlines home button text on hover */
+    /* Underlines button text on hover */
     text-decoration: underline;
 }
 
-/* Position the log out button */
-.logout-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-}
-
-/* Styles for index.html */
-#admin-home {
-    /* Styles for the admin home page container */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center; 
-    padding: 2em;
-    box-sizing: border-box;
-    height: 100vh; 
-}
-
-#admin-title {
-    /* Styles for the title on the admin home page */
-    width: 100%;
-    text-align: center;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    padding: 0.5em;
-    margin-bottom: 2em;
-    font-size: 2em;
-}
-
-.nav-link {
-    /* Styles for navigation links */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80%; 
-    height: 10vh;
-    margin: 1em;
-    text-decoration: none;
-    text-align: center;
-    font-size: 1.5em;
-    padding: 1em;
-    box-sizing: border-box;
-    border: 1px solid black;
-    color: black;
-}
-
-/* Styles for login.html */
-#login-container {
-    /* Styles for the login container */
-    width: 90%; 
-    max-width: 300px;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #000; 
-    border-radius: 4px;
-    box-sizing: border-box; 
-}
-
-#login-container h1 {
-    /* Centers the title in the login container */
-    text-align: center;
-}
-
-.login-form-group {
-    /* Styles for the form group in the login container */
-    display: flex;
-    flex-direction: column; 
-    align-items: start; 
-    margin-bottom: 10px;
-}
-
-.login-form-label,
-.login-form-input {
-    /* Sets the width to 100% for both the label and the input */
-    width: 100%;
-    
-}
-
-#login-button {
-    /* Styles for the login button */
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    text-align: center;
-    border: 1px solid #000;
-}
-    /* Styles for username and password field */
-.login-form-input[type='text'],
-.login-form-input[type='password'] {
-    box-sizing: border-box;
-    padding: .5em;
-    margin-bottom: 10px;
-    border: 1px solid #000;
-}
-
 /* Styles for form */
-.form-container {
+#form-container {
     /* Styles for the form container */
     display: flex;
     justify-content: center;
@@ -135,6 +42,7 @@ body {
     width: 100%; 
     padding: 20px; 
     box-sizing: border-box; 
+    background-color: #E0E0E0; /* softer gray for form background */
 }
 
 .form {
@@ -161,7 +69,6 @@ body {
 
 .form input[type="text"],
 .form input[type="date"],
-.form input[type="time"],
 .form textarea,
 .form select {
     /* Styles for various input types in the form */
@@ -172,18 +79,6 @@ body {
 }
 
 /* Styles for table */
-#reset-button {
-    /* Styles for the reset button */
-    padding: .5em;
-    border: 1px solid #000;
-    cursor: pointer;
-}
-
-#reset-button:hover {
-    /* Changes the background color of the reset button on hover */
-    background-color: #f0f0f0;
-}
-
 .table {
     /* Styles for the table */
     width: 100%;
@@ -193,85 +88,25 @@ body {
     margin-top: 20px; 
 }
 
-.table th,
+.table th {
+    /* Styles for table headers */
+    background-color: #D0D0D0; /* darker gray for table title fields */
+    text-transform: uppercase;
+    padding: 8px; 
+    text-align: left;
+    box-sizing: border-box;
+}
+
 .table td {
-    /* Styles for table headers and table data */
+    /* Styles for table data */
     border: 1px solid black; 
     padding: 8px; 
     text-align: left;
     box-sizing: border-box;
 }
 
-.tableth {
-    /* Styles for table headers */
-    background-color: #f2f2f2;
-    text-transform: uppercase;
-}
-
-.table td button {
-    /* Button in table cell styling */
-    margin-right: .5em;
-}
-
-.table .search-box {
-    /* Search box in table styling */
-    width: 90%; 
-    margin-top: .5em;
-    padding: 5px;
-    border: 1px solid #000; 
-    box-sizing: border-box; 
-}
-
-
-.status-update {
-    /* Status update styling */
-    margin-left: 10px;
-    margin-top: 10px;
-}
-
-.centered-checkbox-cell {
+.table .centered-checkbox-cell,
+.table th:nth-child(6) {  /* This targets the sixth header cell */
     /* Checkbox cell styling */
-    text-align: center;
-}
-
-/* For screens smaller than or equal to 375px */
-@media (max-width: 375px) {
-    body {
-        font-size: 14px; /* Decrease the font size */
-    }
-
-    /* Adjust sizes and spacing for form and input elements */
-    .form-container, 
-    .form, 
-    .form .form-row {
-        padding: 5px;
-        margin: 5px;
-    }
-
-    .form input[type="text"],
-    .form input[type="date"],
-    .form input[type="time"],
-    .form textarea,
-    .form select {
-        font-size: 14px; /* Decrease the font size in form elements */
-    }
-
-    /* Adjust sizes and spacing for table elements */
-    .table th,
-    .table td {
-        padding: 4px; /* Decrease the table cell padding */
-        font-size: 14px; /* Decrease the font size in table elements */
-    }
-
-    /* Adjust the search box size */
-    .table .search-box {
-        width: 85%;
-        padding: 3px;
-    }   
-    /* Sets size and border on smaller screens */ 
-    .login-form-input[type='password'],
-    .login-form-input[type='text'] {
-        width: 100% !important;
-        border: 1px solid #000;
-    }
+    text-align: center; /* ensures checkboxes are centered */
 }
