@@ -124,3 +124,44 @@ footer {
     padding: 5px 0; 
     font-size: 0.8em; 
 }
+
+@media (max-width: 375px) {
+    body {
+        font-size: 80%; /* Reduced text size for small screens */
+    }
+
+    .button {
+        display: block;
+        margin: 0 auto 10px; /* Center buttons and add margin below */
+        width: 100%;
+    }
+
+    .logout-button {
+        position: static; /* Reset position */
+        margin-bottom: 20px; /* Add margin below */
+    }
+
+    /* Stack form fields vertically */
+    .form .form-row {
+        flex-direction: column;
+        width: 100%;
+        
+
+    }
+
+    #form-container {
+        flex-direction: column;
+        width: 100%;
+        position: relative;
+    }
+
+    .table {
+        overflow-x: auto; /* Horizontal scrollbar */
+        
+    }
+
+    footer {
+        /* Stylings for footer */ 
+        font-size: 0.6em; 
+    }
+}
