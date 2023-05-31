@@ -3,27 +3,30 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Admin panel for email announcements.">
         <title>Email Announcements Admin</title>
         <link rel="stylesheet" href="q2a.css">
     </head>
     <body>
-        <!--Page Title-->
-        <h1>Email Announcements</h1>
+        <header>
+            <!--Page Title-->
+            <h1>Email Announcements</h1>
         
-        <!--Home and log out buttons-->
-        <a href="#" class="button">Back to Home</a>
-        <a class="button logout-button" href="#">Log Out</a>
+            <!--Home and log out buttons-->
+            <button class="button" onclick="window.location.href='#'">Back to Home</button>
+            <button class="button logout-button" onclick="window.location.href='#'">Log Out</button>
+        </header>
         
-        <!--Add new announcement form-->
-        <div id="form-container">
-            <!--Changed submit button to post to reflector-->
-            <form action="https://students.open.ac.uk/mct/tt284/reflect/reflect.php" method="POST" class="form">
-                <fieldset>
-                    <legend>Create New Announcement Email</legend>
+         <!--Add new announcement form-->
+        <section id="form-container" role="form">
+        <!--Changed submit button to post to reflector-->
+        <form action="https://students.open.ac.uk/mct/tt284/reflect/reflect.php" method="POST" class="form">
+            <fieldset>
+                <legend>Create New Announcement Email</legend>
 
-                    <!--SessionIdentifier field-->
-                    <input type="hidden" name="SessionIdentifier" value="ee32-ff67-abcd1234-9090">
-
+                <!--SessionIdentifier field-->
+                <input type="hidden" name="SessionIdentifier" value="ee32-ff67-abcd1234-9090">
+                    
                     <!--Form fields-->
                     <div class="form-row">
                         <label for="sender-name">Sender's Name:</label>
@@ -51,22 +54,25 @@
                     </div>
 
                     <input type="submit" value="Schedule Email" class="wider-button">
-
                 </fieldset>
             </form>
-        </div>
+        </section>
 
         <!--Table to display data-->
-        <table class="table">
-            <tr>
-                <th>Sender <br><input type="text" class="search-box" placeholder="Search"></th>
-                <th>Subject <br><input type="text" class="search-box" placeholder="Search"></th>
-                <th>Email Body <br><input type="text" class="search-box" placeholder="Search"></th>
-                <th>Attachment <br><input type="text" class="search-box" placeholder="Search"></th>
-                <th>Send Date <br><input type="text" class="search-box" placeholder="Search"></th>
-                <th>Archived<br><input type="checkbox" class="search-box"></th>
-                <th>Actions <br><button id="reset-button">Remove Filter</button></th>
-            </tr>
+        <section>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Sender <input type="text" class="search-box" placeholder="Search" aria-label="Search Sender"></th>
+                        <th>Subject <br><input type="text" class="search-box" placeholder="Search"></th>
+                        <th>Email Body <br><input type="text" class="search-box" placeholder="Search"></th>
+                        <th>Attachment <br><input type="text" class="search-box" placeholder="Search"></th>
+                        <th>Send Date <br><input type="text" class="search-box" placeholder="Search"></th>
+                        <th>Archived<br><input type="checkbox" class="search-box"></th>
+                        <th>Actions <br><button id="reset-button">Remove Filter</button></th>
+                    </tr>
+                </thead>
+            <tbody>
 
             <!--Example data to show how table will show it-->
             <tr>
@@ -97,6 +103,8 @@
                     <button>Archive</button>
                 </td>
             </tr>
-        </table>
-    </body>
+        </tbody>
+    </table>
+</section>
+</body>
 </html>
