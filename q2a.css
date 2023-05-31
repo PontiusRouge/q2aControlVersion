@@ -114,14 +114,15 @@ body {
 
 footer {
     /* Stylings for footer */ 
-    border-top: 2px solid #000000; /* Change to the color you want */
+    border-top: 2px solid #000000; 
     width: 100%;
-    position: fixed; /* This will keep the footer at the bottom of the page */
+    position: fixed; 
     bottom: 0;
     left: 0;
-    background-color: #FFFFFF; /* Change to the color you want */
-    text-align: center; /* This will center the text */
-    padding: 5px 0; /* This will add 5px of space at the top and bottom of the text, making the border closer to the text */
-    font-size: 0.6em; /* This will make the text smaller */
+    background-color: #FFFFFF; 
+    text-align: center; 
+    padding: 5px 0; 
+    
 }
+
 
