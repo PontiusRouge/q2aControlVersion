@@ -1,0 +1,126 @@
+/* Common styles for all pages */
+body {
+    font-family: Arial, sans-serif; 
+    padding: 20px; 
+    box-sizing: border-box; 
+    background-color: #F5F5F5;
+    position: relative; /* added this */
+}
+
+.button {
+    /* Styles for the home button */
+    display: inline-block;
+    width: max-content;
+    padding: 10px 20px;
+    color: black;
+    text-decoration: none;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #E0E0E0;
+}
+
+.logout-button {
+    /* Styles for the log out button */
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.button:hover {
+    /* Underlines button text on hover */
+    text-decoration: underline;
+}
+
+/* Styles for form */
+#form-container {
+    /* Styles for the form container */
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    width: 100%; 
+    padding: 20px; 
+    box-sizing: border-box; 
+    background-color: #E0E0E0; /* softer gray for form background */
+}
+
+.form {
+    /* Styles for the form */
+    width: 100%; 
+    margin: 0;
+    text-align: left; 
+    box-sizing: border-box; 
+}
+
+.form .form-row {
+    /* Styles for form rows */
+    display: flex;
+    flex-direction: column; 
+    align-items: start; 
+    margin-bottom: 1em;
+}
+
+.form label {
+    /* Styles for labels in the form */
+    width: 100%; 
+    margin-bottom: .5em;
+}
+
+.form input[type="text"],
+.form input[type="date"],
+.form textarea,
+.form select {
+    /* Styles for various input types in the form */
+    width: 100%; 
+    padding: .5em;
+    border: 1px solid #000;
+    box-sizing: border-box;
+}
+
+/* Styles for table */
+.table {
+    /* Styles for the table */
+    width: 100%;
+    border-collapse: collapse; 
+    border: 1px solid black; 
+    box-sizing: border-box; 
+    margin-top: 20px; 
+    background-color: #FFFFFF;
+}
+
+.table th {
+    /* Styles for table headers */
+    border: 1px solid black; 
+    padding: 8px; 
+    text-align: left;
+    box-sizing: border-box;
+    background-color: #D3D3D3; /* slightly darker gray for headers */
+}
+
+.table td {
+    /* Styles for table data */
+    border: 1px solid black; 
+    padding: 8px; 
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.table .centered-checkbox-cell,
+.table th:nth-child(6) {  
+    /* Checkbox cell styling */
+    text-align: center; 
+}
+
+footer {
+    /* Stylings for footer */ 
+    border-top: 2px solid #000000; 
+    width: 100%;
+    position: fixed; 
+    bottom: 0;
+    left: 0;
+    background-color: #FFFFFF; 
+    text-align: center; 
+    padding: 5px 0; 
+    font-size: 0.8em; 
+}
