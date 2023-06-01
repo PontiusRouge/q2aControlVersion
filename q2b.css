@@ -87,6 +87,7 @@ body {
     box-sizing: border-box; 
     margin-top: 20px; 
     background-color: #FFFFFF;
+    min-width: 150px;
 }
 
 .table th {
@@ -110,6 +111,15 @@ body {
 .table th:nth-child(6) {  
     /* Checkbox cell styling */
     text-align: center; 
+}
+
+.table th,
+.table td {
+    /* Styles for table data */
+    min-width: 150px !important;
+}
+.table-container {
+    overflow-x: auto;
 }
 
 footer {
@@ -163,6 +173,4 @@ footer {
     footer {
         font-size: 0.4em; 
     }
-    
-
 }
