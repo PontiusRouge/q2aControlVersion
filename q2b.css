@@ -125,7 +125,7 @@ footer {
     font-size: 0.8em; 
 }
 
-@media (max-width: 375px) {
+@media (max-width: 375px) and (orientation: portrait) {
     body {
         font-size: 80%; /* Reduced text size for small screens */
     }
@@ -148,7 +148,7 @@ footer {
         
 
     }
-
+    /* set column to */
     #form-container {
         flex-direction: column;
         width: 100%;
